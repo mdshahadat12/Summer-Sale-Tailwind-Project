@@ -68,7 +68,7 @@
         <div class="lg:w-3/4 my-24">
           <h1 class="text-4xl font-semibold mb-5">Kitchenware</h1>
           <div class="flex flex-col lg:flex-row gap-3 justify-between">
-            <div class="card bg-base-100 shadow-xl w-full text-center border-2">
+            <div onclick="clickWork(this)" class="card bg-base-100 shadow-xl w-full text-center border-2 cursor-pointer">
               <figure><img src="./images/prod1.png" alt="Shoes" /></figure>
               <div class="card-body">
                 <div class="rating justify-center">
@@ -103,7 +103,7 @@
                 <div class="text-[#11111180]"><span>39.00</span> TK</div>
               </div>
             </div>
-            <div class="card bg-base-100 shadow-xl w-full text-center border-2">
+            <div onclick="clickWork(this)" class="card bg-base-100 shadow-xl w-full text-center border-2 cursor-pointer">
               <figure><img src="./images/prod2.png" alt="Shoes" /></figure>
               <div class="card-body">
                 <div class="rating justify-center">
@@ -138,7 +138,7 @@
                 <div class="text-[#11111180]"><span>25.00</span> TK</div>
               </div>
             </div>
-            <div class="card bg-base-100 shadow-xl w-full text-center border-2">
+            <div onclick="clickWork(this)" class="card bg-base-100 shadow-xl w-full text-center border-2 cursor-pointer">
               <figure><img src="./images/prod3.png" alt="Shoes" /></figure>
               <div class="card-body">
                 <div class="rating justify-center">
@@ -176,7 +176,7 @@
           </div>
           <h1 class="text-4xl font-semibold mt-24 mb-5">Sportswear</h1>
           <div class="flex flex-col lg:flex-row gap-3 justify-between">
-            <div class="card bg-base-100 shadow-xl w-full text-center border-2">
+            <div onclick="clickWork(this)" class="card bg-base-100 shadow-xl w-full text-center border-2 cursor-pointer">
               <figure><img src="./images/prod4.png" alt="Shoes" /></figure>
               <div class="card-body">
                 <div class="rating justify-center">
@@ -211,7 +211,7 @@
                 <div class="text-[#11111180]"><span>49.00</span> TK</div>
               </div>
             </div>
-            <div class="card bg-base-100 shadow-xl w-full text-center border-2">
+            <div onclick="clickWork(this)" class="card bg-base-100 shadow-xl w-full text-center border-2 cursor-pointer">
               <figure><img src="./images/prod5.png" alt="Shoes" /></figure>
               <div class="card-body">
                 <div class="rating justify-center">
@@ -246,7 +246,7 @@
                 <div class="text-[#11111180]"><span>69.00</span> TK</div>
               </div>
             </div>
-            <div class="card bg-base-100 shadow-xl w-full text-center border-2">
+            <div onclick="clickWork(this)" class="card bg-base-100 shadow-xl w-full text-center border-2 cursor-pointer">
               <figure><img src="./images/prod6.png" alt="Shoes" /></figure>
               <div class="card-body">
                 <div class="rating justify-center">
@@ -285,23 +285,23 @@
         </div>
         <div class="lg:w-3/12 mt-40 text-lg font-semibold">
           <h1>Have coupon?</h1>
-          <input
-            class="p-2 w-3/5 mt-3 rounded-lg border-2"
+          <input id="couponField"
+            class="p-2 w-[70%] mt-3 rounded-lg border-2"
             type="text"
             placeholder="Coupon Code"
           />
-          <input
-            class="p-[10px] mb-14 -ml-3 text-white bg-[#E527B2] rounded-r-lg"
+          <input id="applyBtn"
+            class="p-[10px] w-[30%] mb-14 -ml-3 text-white bg-[#E527B2] rounded-r-lg cursor-pointer"
             type="button"
             value="Apply"
           />
-          <ol class="list-decimal ml-5 mb-5">
+          <ol id="ol" class="list-decimal ml-5 mb-5">
           </ol>
-          <p>Total price: <span class="text-[#11111180]">00.00</span> TK</p>
-          <p>Discount : <span class="text-[#11111180]">00.00</span> TK</p>
-          <p>Total: <span class="text-[#11111180]">00.00</span> TK</p>
+          <p>Total price: <span id="totalPrice" class="text-[#11111180]">00.00</span> TK</p>
+          <p>Discount : <span id="discountShow" class="text-[#11111180]">00.00</span> TK</p>
+          <p>Total: <span id="totalShow" class="text-[#11111180]">00.00</span> TK</p>
           <!-- You can open the modal using ID.showModal() method -->
-          <button class="py-3 w-full mt-12 text-white bg-[#E527B2] rounded-lg" onclick="my_modal_4.showModal()">
+          <button disabled id="purchase" class="py-3 w-full mt-12 text-white bg-[#E527B2] rounded-lg" onclick="my_modal_4.showModal()">
             Make Purchase
           </button>
           <dialog id="my_modal_4" class="modal">
@@ -315,5 +315,6 @@
         </div>
       </div>
     </main>
+    <script src="./index.js"></script>
   </body>
 </html>
