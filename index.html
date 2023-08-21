@@ -289,12 +289,12 @@
         <div class="lg:w-3/12 mt-40 text-lg font-semibold">
           <h1>Have coupon?</h1>
           <input id="couponField"
-            class="p-2 w-[70%] mt-3 rounded-lg border-2"
+            class="p-2 py-[10px] w-[67%] mt-3 rounded-lg border-2 text-base font-normal"
             type="text"
             placeholder="Coupon Code"
           />
-          <input id="applyBtn"
-            class="p-[10px] w-[30%] mb-14 -ml-3 text-white bg-[#E527B2] rounded-r-lg cursor-pointer"
+          <input disabled id="applyBtn"
+            class="p-[10px] w-[30%] mb-14  text-white hover:bg-[#E527B2] bg-[#E527B2] btn cursor-pointer rounded-r-lg"
             type="button"
             value="Apply"
           />
@@ -304,7 +304,7 @@
           <p>Discount : <span id="discountShow" class="text-[#11111180]">00.00</span> TK</p>
           <p>Total: <span id="totalShow" class="text-[#11111180]">00.00</span> TK</p>
           <!-- You can open the modal using ID.showModal() method -->
-          <button disabled id="purchase" class="py-3 w-full mt-12 text-white bg-[#E527B2] rounded-lg" onclick="my_modal_4.showModal()">
+          <button disabled id="purchase" class="hover:bg-[#E527B2] btn py-3 w-full mt-12 text-white bg-[#E527B2] rounded-lg" onclick="my_modal_4.showModal()">
             Make Purchase
           </button>
           <dialog id="my_modal_4" class="modal">

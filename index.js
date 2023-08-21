@@ -19,7 +19,7 @@ applyBtn.addEventListener("click", function () {
 
   const totalPriceNum = getInnerText('totalPrice');
 
-  if (totalPriceNum >= 200 && couponValue == "SELL200") {
+  if (couponValue == "SELL200") {
     const discount1 = (20 / 100) * totalPriceNum;
     const discount = discount1.toFixed(2);
     discountShow.innerText = discount;
@@ -27,6 +27,9 @@ applyBtn.addEventListener("click", function () {
     const totalShowpre = totalPriceNum - discount;
     const totalShowFix = totalShowpre.toFixed(2);
     totalShow.innerText = totalShowFix;
+  }else{
+    alert("Please Write a valid coupun");
+    couponField.value = '';
   }
 });
 
@@ -52,6 +55,15 @@ function clickWork(e){
     totalPrice.innerText = FixedNum;
     totalShow.innerText = FixedNum;
 
-    const purchase = document.getElementById('purchase');
-    purchase.removeAttribute('disabled');
+    if(sum >= 200){
+      const applyBtn = document.getElementById('applyBtn');
+      applyBtn.removeAttribute('disabled');
+      
+    }
+    if(sum > 0){
+      const purchase = document.getElementById('purchase');
+      purchase.removeAttribute('disabled');
+      
+      
+    }
 }
