@@ -67,3 +67,9 @@ function clickWork(e){
       
     }
 }
+
+document.getElementById('copy').addEventListener('click', function(){
+  const copy = document.getElementById('copy');
+const copyValue = copy.innerText;
+  navigator.clipboard.writeText(copyValue);
+})
